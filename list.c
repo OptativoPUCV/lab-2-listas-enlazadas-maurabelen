@@ -34,10 +34,12 @@ List * createList() {
         return NULL;
     nuevaLista -> head = NULL;
     nuevaLista ->tail = NULL;
+    nuevaLista -> current = NULL;
     return nuevaLista;
 }
 
 void * firstList(List * list) {
+
     return NULL;
 }
 
