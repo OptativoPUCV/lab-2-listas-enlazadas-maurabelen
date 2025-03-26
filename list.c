@@ -43,6 +43,7 @@ void * firstList(List * list) {
         return NULL;
     }
 
+    list -> current = list -> head;
     return list -> head;
     
 }
