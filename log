@@ -129,3 +129,13 @@ Wed, Mar 26, 2025  9:44:00 AM:
  tests:  2|5
 total_score: 15/70
 e059db7
+Sat, Mar 29, 2025  9:44:14 PM: 
+ list.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:
+list.c: In function 'nextList':
+list.c:53:37: error: expected ',' or ';' before ':' token
+   53 |     void *data = list->current->data:
+      |                                     ^
+Compilation failed
+67ecce2
