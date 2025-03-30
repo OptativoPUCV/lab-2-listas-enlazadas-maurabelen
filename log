@@ -443,3 +443,14 @@ C:/msys64/ucrt64/include/stdlib.h:423:27: note: expected 'void *' but argument i
       |                     ~~~~~~^~~~~~~
 Compilation failed
 88c2416
+Sat, Mar 29, 2025 11:26:15 PM: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function 'popCurrent':
+list.c:135:13: error: 'prev' undeclared (first use in this function)
+  135 |     if(temp-prev != NULL){
+      |             ^~~~
+list.c:135:13: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+f1aca7f
