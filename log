@@ -189,3 +189,31 @@ Sat, Mar 29, 2025 10:08:22 PM:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 27a82f3
+Sat, Mar 29, 2025 10:28:15 PM: 
+ list.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function 'pushFront':
+list.c:75:9: error: dereferencing 'void *' pointer [-Werror]
+   75 |     data->next = list->head;
+      |         ^~
+list.c:75:9: error: request for member 'next' in something not a structure or union
+list.c:76:39: error: 'newNode' undeclared (first use in this function); did you mean 'Node'?
+   76 |     if(list->head) list->head->prev = newNode;
+      |                                       ^~~~~~~
+      |                                       Node
+list.c:76:39: note: each undeclared identifier is reported only once for each function it appears in
+list.c:77:5: error: 'liost' undeclared (first use in this function); did you mean 'list'?
+   77 |     liost->head = newNode;
+      |     ^~~~~
+      |     list
+list.c:78:9: error: 'List' {aka 'struct List'} has no member named 'size'
+   78 |     list->size++;
+      |         ^~
+list.c: In function 'prevList':
+list.c:71:1: error: control reaches end of non-void function [-Werror=return-type]
+   71 | }
+      | ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+1035303
