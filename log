@@ -157,3 +157,18 @@ Sat, Mar 29, 2025  9:52:48 PM:
  tests:  2|5
 total_score: 15/70
 ef43f3c
+Sat, Mar 29, 2025  9:57:08 PM: 
+ list.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function 'prevList':
+list.c:72:18: error: 'List' {aka 'struct List'} has no member named 'curret'; did you mean 'current'?
+   72 |     return list->curret->data;
+      |                  ^~~~~~
+      |                  current
+list.c:73:1: error: control reaches end of non-void function [-Werror=return-type]
+   73 | }
+      | ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+4a28b45
