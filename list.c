@@ -132,7 +132,7 @@ void * popCurrent(List * list) {
     }
     Node *temp = list->current;
     void* data = temp->data;
-    if(temp-prev != NULL){
+    if(temp->prev != NULL){
         temp->prev->next = temp->next;
     }
     else{
