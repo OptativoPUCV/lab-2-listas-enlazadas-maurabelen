@@ -267,3 +267,23 @@ Sat, Mar 29, 2025 10:53:07 PM:
  tests:  10|2
 total_score: 45/70
 2ba90ca
+Sat, Mar 29, 2025 11:09:09 PM: 
+ list.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+In file included from test.c:5:
+list.c: In function 'pushCurrent':
+list.c:108:11: error: unused variable 'nextNode' [-Werror=unused-variable]
+  108 |     Node* nextNode = list->current->next;
+      |           ^~~~~~~~
+list.c:113:8: error: 'nextNode' undeclared (first use in this function); did you mean 'createNode'?
+  113 |     if(nextNode != NULL){
+      |        ^~~~~~~~
+      |        createNode
+list.c:113:8: note: each undeclared identifier is reported only once for each function it appears in
+list.c:114:26: error: 'newNode' undeclared (first use in this function); did you mean 'Node'?
+  114 |         nextNode->prev = newNode;
+      |                          ^~~~~~~
+      |                          Node
+cc1.exe: all warnings being treated as errors
+Compilation failed
+ed2958b
