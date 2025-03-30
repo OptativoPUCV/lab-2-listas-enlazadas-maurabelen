@@ -217,3 +217,22 @@ list.c:71:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1.exe: all warnings being treated as errors
 Compilation failed
 1035303
+Sat, Mar 29, 2025 10:38:34 PM: 
+ list.c | 13 ++++++++++---
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function 'pushFront':
+list.c:78:32: error: expected expression before 'void'
+   78 |     Node* newNode = createNode(void * data);
+      |                                ^~~~
+list.c:80:16: error: 'return' with a value, in function returning void [-Wreturn-mismatch]
+   80 |         return NULL;
+      |                ^~~~
+list.c:77:6: note: declared here
+   77 | void pushFront(List * list, void * data) {
+      |      ^~~~~~~~~
+list.c:85:9: error: 'List' {aka 'struct List'} has no member named 'size'
+   85 |     list->size++;
+      |         ^~
+Compilation failed
+4d5692d
