@@ -47,10 +47,9 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    if(list -> current == NULL){
+    if(list == NULL || list -> current == NULL || list->current->next == NULL){
         return NULL;
     }
-    void *data = list->current->data;
     list->current = list->current->next;
     return data;
 }
@@ -90,7 +89,6 @@ void pushFront(List * list, void * data) {
     }
     
     newNode-> prev = NULL;
-    list->size++;
 }
 
 void pushBack(List * list, void * data) {
