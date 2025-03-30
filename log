@@ -342,3 +342,51 @@ list.c:151:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1.exe: all warnings being treated as errors
 Compilation failed
 8149a60
+Sat, Mar 29, 2025 11:24:35 PM: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function 'popCurrent':
+list.c:134:22: error: dereferencing 'void *' pointer [-Werror]
+  134 |     void* data = temp->data;
+      |                      ^~
+list.c:134:22: error: request for member 'data' in something not a structure or union
+list.c:135:13: error: 'prev' undeclared (first use in this function)
+  135 |     if(temp-prev != NULL){
+      |             ^~~~
+list.c:135:13: note: each undeclared identifier is reported only once for each function it appears in
+list.c:136:13: error: dereferencing 'void *' pointer [-Werror]
+  136 |         temp->prev->next = temp->next;
+      |             ^~
+list.c:136:13: error: request for member 'prev' in something not a structure or union
+list.c:136:32: error: dereferencing 'void *' pointer [-Werror]
+  136 |         temp->prev->next = temp->next;
+      |                                ^~
+list.c:136:32: error: request for member 'next' in something not a structure or union
+list.c:139:26: error: dereferencing 'void *' pointer [-Werror]
+  139 |         list->head = temp->next;
+      |                          ^~
+list.c:139:26: error: request for member 'next' in something not a structure or union
+list.c:142:12: error: dereferencing 'void *' pointer [-Werror]
+  142 |     if(temp->next != NULL){
+      |            ^~
+list.c:142:12: error: request for member 'next' in something not a structure or union
+list.c:143:13: error: dereferencing 'void *' pointer [-Werror]
+  143 |         temp->next->prev = temp->prev;
+      |             ^~
+list.c:143:13: error: request for member 'next' in something not a structure or union
+list.c:143:32: error: dereferencing 'void *' pointer [-Werror]
+  143 |         temp->next->prev = temp->prev;
+      |                                ^~
+list.c:143:32: error: request for member 'prev' in something not a structure or union
+list.c:146:26: error: dereferencing 'void *' pointer [-Werror]
+  146 |         list->tail = temp->prev;
+      |                          ^~
+list.c:146:26: error: request for member 'prev' in something not a structure or union
+list.c:148:26: error: dereferencing 'void *' pointer [-Werror]
+  148 |     list-> current = temp->next;
+      |                          ^~
+list.c:148:26: error: request for member 'next' in something not a structure or union
+cc1.exe: all warnings being treated as errors
+Compilation failed
+3ad0954
